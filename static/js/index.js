@@ -42,7 +42,7 @@ function selectPolitician() {
 
 
 function plotChartOne() {
-    Plotly.d3.csv("https://raw.githubusercontent.com/codeforcroatia/putni-troskovi-dashboard/gh-pages/dataset-sluzbenaputovanjaclanovavladeALL.csv", function(err, rows) {
+    Plotly.d3.csv("https://raw.githubusercontent.com/codeforcroatia/putni-troskovi-dashboard/gh-pages/data/dataset-sluzbenaputovanjaclanovavladeALL.csv", function(err, rows) {
 
         function unpack(rows, key) {
             return rows.map(function(row) {
@@ -50,7 +50,7 @@ function plotChartOne() {
             });
         }
 
-        // var thisPolitician = unpack(rows, 'Ime.i.prezime');
+        // dynamically use politician name from thisPolitician selection
         if (putniTroskoviOdabir) {
             var politicianName = putniTroskoviOdabir;
         } else {
@@ -121,7 +121,7 @@ function plotChartOne() {
 }
 
 function plotChartTwo() {
-    Plotly.d3.csv("https://raw.githubusercontent.com/codeforcroatia/putni-troskovi-dashboard/gh-pages/dataset-sluzbenaputovanjaclanovavladeALL.csv", function(err, rows) {
+    Plotly.d3.csv("https://raw.githubusercontent.com/codeforcroatia/putni-troskovi-dashboard/gh-pages/data/dataset-sluzbenaputovanjaclanovavladeALL.csv", function(err, rows) {
 
         function unpack(rows, key) {
             return rows.map(function(row) {
@@ -129,7 +129,12 @@ function plotChartTwo() {
             });
         }
 
-        // var thisPolitician = unpack(rows, 'Ime.i.prezime');
+        // dynamically use politician name from thisPolitician selection
+        if (putniTroskoviOdabir) {
+            var politicianName = putniTroskoviOdabir;
+        } else {
+            var politicianName = 'sve';
+        }
 
         var trace1 = {
             type: "bar",
@@ -140,7 +145,7 @@ function plotChartTwo() {
                 type: 'filter',
                 target: unpack(rows, 'Ime.i.prezime'),
                 operation: '=',
-                value: "Gabrijela Žalac"
+                value: politicianName
             }]
         }
 
@@ -153,7 +158,7 @@ function plotChartTwo() {
                 type: 'filter',
                 target: unpack(rows, 'Ime.i.prezime'),
                 operation: '=',
-                value: "Gabrijela Žalac"
+                value: politicianName
             }]
         }
 
@@ -166,7 +171,7 @@ function plotChartTwo() {
                 type: 'filter',
                 target: unpack(rows, 'Ime.i.prezime'),
                 operation: '=',
-                value: "Gabrijela Žalac"
+                value: politicianName
             }]
         }
 
@@ -196,7 +201,7 @@ function plotChartTwo() {
 
 function plotChartThree() {
 
-    Plotly.d3.csv("https://raw.githubusercontent.com/codeforcroatia/putni-troskovi-dashboard/gh-pages/dataset-sluzbenaputovanjaclanovavladeALL.csv", function(err, rows) {
+    Plotly.d3.csv("https://raw.githubusercontent.com/codeforcroatia/putni-troskovi-dashboard/gh-pages/data/dataset-sluzbenaputovanjaclanovavladeALL.csv", function(err, rows) {
 
         function unpack(rows, key) {
             return rows.map(function(row) {
@@ -204,7 +209,12 @@ function plotChartThree() {
             });
         }
 
-        // var thisPolitician = unpack(rows, 'Ime.i.prezime');
+        // dynamically use politician name from thisPolitician selection
+        if (putniTroskoviOdabir) {
+            var politicianName = putniTroskoviOdabir;
+        } else {
+            var politicianName = 'sve';
+        }
 
         var trace1 = {
             mode: 'markers',
@@ -222,7 +232,7 @@ function plotChartThree() {
                 type: 'filter',
                 target: unpack(rows, 'Ime.i.prezime'),
                 operation: '=',
-                value: "Gabrijela Žalac"
+                value: politicianName
             }]
         }
 
