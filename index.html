@@ -28,11 +28,6 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <!-- <li><a href="http://moderndata.plot.ly/update-plotly-charts-with-cron-jobs-and-python/">Početna</a></li> -->
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><!--<span class="caret"></span>--><span class="glyphicon glyphicon-folder-open"></span> Status otvorenosti</a>
-          </li>
           <li class="dropdown">
       			<div class="form-group">
       			    <select class="form-control navbar-btn" id="thisPolitician">
@@ -113,16 +108,19 @@
       			</div>
           </li>
           <li class="dropdown">
-			<button type="button" class="btn btn-danger navbar-btn" onclick="selectPolitician()">Prikaži</button>
+			       &nbsp;<button type="button" class="btn btn-danger navbar-btn" onclick="selectPolitician()">Prikaži</button>
           </li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><!--<span class="caret"></span>--></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Status otvorenosti</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;&nbsp;Info&nbsp;&nbsp;<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="https://plot.ly/python/sending-data-to-charts/#overwrite-chart-data-with-new-data">O projektu</a></li>
-              <li><a href="https://plot.ly/python/sending-data-to-charts/#add-data-to-an-existing-trace">Preuzmi skup podataka</a></li>
-              <li><a href="https://plot.ly/python/sending-data-to-charts/#add-new-traces-to-a-chart">Kontaktiraj nas</a></li>
+              <li><a href="https://codeforcroatia.org/blog/proaktivna_objava_troskova_putovanja_clanova_vlade_rh-2">O projektu</a></li>
+              <li><a href="https://raw.githubusercontent.com/codeforcroatia/putni-troskovi-dashboard/gh-pages/data/dataset-sluzbenaputovanjaclanovavladeALL.csv">Preuzmi skup podataka</a></li>
+              <li><a href="https://codeforcroatia.org/contact">Kontaktiraj nas</a></li>
             </ul>
           </li>
         </ul>
